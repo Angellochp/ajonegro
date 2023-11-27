@@ -1284,6 +1284,8 @@ progress {
   }
 }
 @media (min-width: 992px) {
+
+
   .col-lg {
     flex: 1 0 0%;
   }
@@ -1996,6 +1998,16 @@ progress {
   }
 }
 @media (max-width: 991.98px) {
+  .card-des{
+    min-width: auto;
+  }
+
+  .img-catalogo{
+    height: 50%;
+  }
+  .img-coments{
+    display: none;
+  }
   .table-responsive-lg {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
