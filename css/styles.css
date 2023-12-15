@@ -38,6 +38,7 @@
     list-style:none;
     font-family: 'Noto Serif';
     color: #FFF;
+    max-width: 200px;
   }
 
   .sections-ajo h1{
