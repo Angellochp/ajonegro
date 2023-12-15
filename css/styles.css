@@ -38,7 +38,7 @@
     list-style:none;
     font-family: 'Noto Serif';
     color: #FFF;
-    max-width: 200px;
+    /*max-width: 200px;*/
   }
 
   .sections-ajo h1{
@@ -1992,15 +1992,13 @@ progress {
     -webkit-overflow-scrolling: touch;
   }
 }
-@media (max-width: 767.98px) {
-  .table-responsive-md {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-}
+
 @media (max-width: 991.98px) {
   .card-des{
     min-width: auto;
+  }
+  .comentarios-clientes{
+    font-size: small;
   }
 
   .img-catalogo{
@@ -2012,6 +2010,15 @@ progress {
   .table-responsive-lg {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+  }
+}
+@media (max-width: 767.98px) {
+  .table-responsive-md {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .comentarios-clientes{
+    font-size: x-small;
   }
 }
 @media (max-width: 1199.98px) {
@@ -11114,6 +11121,7 @@ body {
     outline: none;
     border-bottom: 0.25rem solid #C29436;
   }
+
 }
 
 .btn {
@@ -11157,6 +11165,7 @@ body {
     font-size: 4rem;
     line-height: 4rem;
   }
+
 }
 @media (min-width: 992px) {
   .masthead {
