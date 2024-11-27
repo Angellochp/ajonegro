@@ -1,5 +1,29 @@
 @charset "UTF-8";
 
+.collapse-toggle{
+  text-decoration: none;
+}
+
+.collapse {
+  transition: height 0.95s ease; /* Cambiar a height */
+  height: 0; /* Inicia con altura 0 */
+  overflow: hidden; /* Oculta contenido excedente */
+}
+
+.collapse.show {
+  height: auto; /* Permitir que bootstraps maneje la altura */
+}
+.arrow {
+  display: inline-block;
+  transition: transform 0.3s ease; /* Ajusta la duración y el tipo de transición */
+}
+
+.arrow.rotate {
+  transform: rotate(180deg); /* Gira la flecha 180 grados */
+}
+
+
+
 #mainNav.navbar-shrink {
   background-color: black;
   opacity: 0.8;
@@ -3310,7 +3334,7 @@ textarea.form-control-lg {
 }
 
 .collapse:not(.show) {
-  display: none;
+  height: 0;
 }
 
 .collapsing {

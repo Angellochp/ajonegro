@@ -6,6 +6,66 @@
 //
 // Scripts
 // 
+const collapseToggles = document.querySelectorAll('.collapse-toggle');
+
+collapseToggles.forEach(toggle => {
+    const collapseElement = document.querySelector(toggle.getAttribute('href'));
+    const arrow = toggle.querySelector('.arrow');
+
+    // Evento de clic
+    toggle.addEventListener('click', function() {
+        arrow.classList.toggle('rotate'); // Alterna la rotación de la flecha
+    });
+
+    // Escuchar eventos de Bootstrap para mantener la rotación en sincronización
+    collapseElement.addEventListener('shown.bs.collapse', function() {
+        arrow.classList.add('rotate');
+    });
+
+    collapseElement.addEventListener('hidden.bs.collapse', function() {
+        arrow.classList.remove('rotate');
+    });
+});
+
+
+
+
+const collapsibleElement = document.getElementById('propiedad-antioxidante');
+const arrow = document.getElementById('arrowToggle');
+
+window.addEventListener('scroll', function() {
+    const rect = collapsibleElement.getBoundingClientRect();
+    const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+    // Verifica si el elemento está visible en el viewport
+    if (rect.top >= 0 && rect.bottom <= windowHeight) {
+        // Abre el colapso solo una vez
+        if (!collapsibleElement.classList.contains('show')) {
+            const collapse = new bootstrap.Collapse(collapsibleElement, {
+                toggle: true
+            });
+
+            // Rota la flecha hacia abajo
+            arrow.classList.add('rotate');
+        }
+    }
+});
+
+// Para manejar la rotación de la flecha cuando el colapso se oculta
+collapsibleElement.addEventListener('hidden.bs.collapse', function () {
+    arrow.classList.remove('rotate'); // Retira la rotación si el colapso se oculta
+});
+
+
+document.querySelectorAll('.collapse').forEach(collapseElement => {
+    collapseElement.addEventListener('show.bs.collapse', function () {
+        // Asegura que el colapso calcula la altura correctamente
+        this.style.transitionProperty = 'height, margin, padding';
+        this.style.transitionDuration = '0.89s'; // O tu valor deseado
+    });
+});
+
+
 
 window.addEventListener('DOMContentLoaded', event => {
 
