@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+#mainNav.navbar-shrink {
+  background-color: black;
+  opacity: 0.8;
+}
+
 .texto-ajo-caramelo{
   color: #FFF !important;
   font-family: 'Noto Serif', serif;
